@@ -1,0 +1,1094 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command line to run this workspace:
+#        "C:\Program Files\FME202211\fme.exe" "C:\Users\bdaraujo\Downloads\Fetch attributes from JSON and workflow to send Survey123 email notification.fmw"
+#          --webhook.feature "{   "attributes": {     "installation_complete": "No",     "followup_action_required": "Yes",     "follow_up_action_comment": "Test"   },   "layerInfo": {     "name": "survey",     "id": 0   } } "
+#          --FME_LAUNCH_VIEWER_APP "YES"
+#    
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION="&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;Goal: Send an email notification to users following the submission of a Survey123 inspection, indicating that further action is required.&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;This workspace extracts attribute values from a JSON file, which is generated whenever a new Survey123 is submitted. To accomplish the email notification, the workspace needs to be published on FME Flow with the appropriate automation parameters configured.&lt;/span&gt;&lt;/p&gt;"
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="6223.82 1745.96"
+#!   DOC_TOP_LEFT="-2868.15 -1416.74"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="22623"
+#!   FME_BULK_MODE_THRESHOLD="2000"
+#!   FME_DOCUMENT_GUID="17e375ff-c572-40fd-b4c9-8f655ab0ac8d"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY="19-10-2023,Ivy&lt;space&gt;A,Training&lt;space&gt;-&lt;space&gt;Survey123&lt;space&gt;Email&lt;space&gt;Notification"
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2022.1.1.0 (20220728 - Build 22623 - WIN64)"
+#!   LAST_SAVE_DATE="2024-01-20T19:09:13"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE="Survey123 Email Notification (FME Flow Automations)"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-3025.03 484.38"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="AUTOMATIONS"
+#!   DATASET=""
+#!   KEYWORD="AUTOMATIONS_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="600"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_basename string fme_color string fme_dataset string fme_feature_type string fme_fill_color string fme_geometry string fme_primary_axis float fme_rotation float fme_secondary_axis float fme_start_angle float fme_sweep_angle float fme_text_size float fme_text_string string fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="false"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="NONE"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20218"
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/geo+json ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="AUTOMATIONS"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="action_email"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="2"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="2724.3740507359439 -692.3034053898034"
+#!   BOUNDING_RECT="2724.3740507359439 -692.3034053898034 430 71"
+#!   ORDER="500000000000308.25"
+#!   COLLAPSED="false"
+#!   KEYWORD="AUTOMATIONS_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   SCHEMA_ATTRIBUTE_SOURCE="0"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="html_content" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <AUTOMATION>
+#! <ROUTES>
+#! <ROUTE
+#!   NAME="action_email"
+#! >
+#! <KEYS>
+#! <KEY
+#!   NAME="html_content"
+#! />
+#! </KEYS>
+#! </ROUTE>
+#! </ROUTES>
+#! </AUTOMATION>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR webhook.feature Webhook Feature:"
+#!   DEFAULT_VALUE="{   &quot;attributes&quot;: {     &quot;installation_complete&quot;: &quot;No&quot;,     &quot;followup_action_required&quot;: &quot;Yes&quot;,     &quot;follow_up_action_comment&quot;: &quot;Test&quot;   },   &quot;layerInfo&quot;: {     &quot;name&quot;: &quot;survey&quot;,     &quot;id&quot;: 0   } } "
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJkZWZhdWx0VmFsdWUiOiJ7ICAgXCJhdHRyaWJ1dGVzXCI6IHsgICAgIFwiaW5zdGFsbGF0aW9uX2NvbXBsZXRlXCI6IFwiTm9cIiwgICAgIFwiZm9sbG93dXBfYWN0aW9uX3JlcXVpcmVkXCI6IFwiWWVzXCIsICAgICBcImZvbGxvd191cF9hY3Rpb25fY29tbWVudFwiOiBcIlRlc3RcIiAgIH0sICAgXCJsYXllckluZm9cIjogeyAgICAgXCJuYW1lXCI6IFwic3VydmV5XCIsICAgICBcImlkXCI6IDAgICB9IH0gIiwiZGVwcmVjYXRlZEZsYWdzIjpbIm5vbmUiXSwiZWRpdG9yIjoicGxhaW50ZXh0IiwibmFtZSI6IndlYmhvb2suZmVhdHVyZSIsInByb21wdCI6IldlYmhvb2sgRmVhdHVyZToiLCJyZXF1aXJlZCI6ZmFsc2UsInN1cHBvcnRlZFZhbHVlVHlwZXMiOlsiZXhwcmVzc2lvbiIsImdsb2JhbFBhcmFtZXRlciJdLCJ0eXBlIjoidGV4dCIsInZhbHVlVHlwZSI6InN0cmluZyJ9XX0="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="webhook.feature" 
+#!   DEFAULT_VALUE="{   &quot;attributes&quot;: {     &quot;installation_complete&quot;: &quot;No&quot;,     &quot;followup_action_required&quot;: &quot;Yes&quot;,     &quot;follow_up_action_comment&quot;: &quot;Test&quot;   },   &quot;layerInfo&quot;: {     &quot;name&quot;: &quot;survey&quot;,     &quot;id&quot;: 0   } } "
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="false"
+#!   GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR webhook.feature Webhook Feature:"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="24"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fragments JSON file to extract desired attribute values&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1786.1411619811561 -312.77659198977449"
+#!   TOP_LEFT="-1786.1411619811561 -312.77659198977449"
+#!   BOTTOM_RIGHT="-1034.703906667366 -564.65381076196218"
+#!   BOUNDING_RECT="-1786.1411619811561 -312.77659198977449 751.43725531379005 251.87721877218772"
+#!   ORDER="500000000000300.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="25"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;READ ME&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Goal: Send an email notification to users following the submission of a Survey123 inspection, indicating that further action is required.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This workspace extracts attribute values from a JSON file, which is generated whenever a new Survey123 is submitted. To accomplish the email notification, the workspace needs to be published on FME Flow with the appropriate automation parameters configured.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2868.1541775847936 329.21700993277659"
+#!   TOP_LEFT="-2868.1541775847936 329.21700993277659"
+#!   BOTTOM_RIGHT="-1416.279267724587 21.08922865496379"
+#!   BOUNDING_RECT="-2868.1541775847936 329.21700993277659 1451.8749098602066 308.1277812778128"
+#!   ORDER="500000000000321.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="true"
+#!   COLOUR="1,1,0,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="26"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;In &lt;span style=&quot; font-weight:700;&quot;&gt;User Parameter&lt;/span&gt; default value, add a submitted log from FME Flow automation and call this value using parameter Fetcher.&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;In FME Flow, set up: Webhook &amp;gt; Output Keys &amp;gt; Webhook Keys&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;webhook.feature&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;webhook.eventType&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;webhook.applyEdits&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;To check JSON from survey123 Log, go to FME FLOW, &amp;gt; Automations &amp;gt; Menu &amp;gt; View Log File&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2311.3304275291102 -924.23559203432046"
+#!   TOP_LEFT="-2311.3304275291102 -924.23559203432046"
+#!   BOTTOM_RIGHT="-1463.0002086111181 -1416.7402170805708"
+#!   BOUNDING_RECT="-2311.3304275291102 -924.23559203432046 848.33021891799217 492.50462504625045"
+#!   ORDER="500000000000322.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="3"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="27"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt;&quot;&gt;Create join attribute&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-355.69623970094199 -367.48190535662116"
+#!   TOP_LEFT="-355.69623970094199 -367.48190535662116"
+#!   BOTTOM_RIGHT="98.303760299058013 -368.48190535662116"
+#!   BOUNDING_RECT="-355.69623970094199 -367.48190535662116 454 1"
+#!   ORDER="500000000000326.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="8"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="28"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;.AppleSystemUIFont&apos;; font-size:13pt;&quot;&gt;Create join attribute&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1010.7911513016506 -233.73121784974614"
+#!   TOP_LEFT="1010.7911513016506 -233.73121784974614"
+#!   BOTTOM_RIGHT="1464.7911513016506 -234.73121784974614"
+#!   BOUNDING_RECT="1010.7911513016506 -233.73121784974614 454 1"
+#!   ORDER="500000000000326.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="9"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="29"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Writer: FME Flow  Automations&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2686.3740507359439 -540.05271788292839"
+#!   TOP_LEFT="2686.3740507359439 -540.05271788292839"
+#!   BOTTOM_RIGHT="3305.6745174698285 -638.8034053898034"
+#!   BOUNDING_RECT="2686.3740507359439 -540.05271788292839 619.3004667338846 98.750687506875067"
+#!   ORDER="500000000000329.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="2"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="30"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;nothing happens if actionrequired is no&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-470.99923290403694 -896.30515454812689"
+#!   TOP_LEFT="-470.99923290403694 -896.30515454812689"
+#!   BOTTOM_RIGHT="-16.999232904036944 -897.30515454812689"
+#!   BOUNDING_RECT="-470.99923290403694 -896.30515454812689 454 1"
+#!   ORDER="500000000000332.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="11"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="31"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Check if further action is required after an survey123 inspection is submitted&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-919.8673579489232 -312.77659198977449"
+#!   TOP_LEFT="-919.8673579489232 -312.77659198977449"
+#!   BOTTOM_RIGHT="-465.8673579489232 -313.77659198977449"
+#!   BOUNDING_RECT="-919.8673579489232 -312.77659198977449 454 1"
+#!   ORDER="500000000000333.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="10"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="32"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Create customised email&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="259.12170466897533 -271.23159285349629"
+#!   TOP_LEFT="259.12170466897533 -271.23159285349629"
+#!   BOTTOM_RIGHT="751.22170466897524 -272.23159285349629"
+#!   BOUNDING_RECT="259.12170466897533 -271.23159285349629 492.09999999999997 1"
+#!   ORDER="500000000000334.25"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="6"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="33"
+#!   NAME="Writer - Automation"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="2636.3740507359439 -430.05271788292839"
+#!   ORDER="500000000000336.25"
+#!   PALETTE_COLOR="Color1"
+#!   BOTTOM_RIGHT="3355.666853038967 -856.8034053898034"
+#!   BOUNDING_RECT="2636.3740507359439 -430.05271788292839 719.29280230302311 426.75068750687501"
+#!   STICKY="true"
+#!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
+#!   CONTENTS="2 29 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="ParameterFetcher"
+#!   VERSION="4"
+#!   POSITION="-2189.3616394166311 -685.91758218295763"
+#!   BOUNDING_RECT="-2189.3616394166311 -685.91758218295763 454 71"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20820"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_webhook.feature $(webhook.feature)"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="Creator"
+#!   VERSION="5"
+#!   POSITION="-2791.4488650771209 -637.77859200977468"
+#!   BOUNDING_RECT="-2791.4488650771209 -637.77859200977468 430 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="CREATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="ATEND" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="COORDS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CRE_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="&lt;lt&gt;?xml&lt;space&gt;version=&lt;quote&gt;1.0&lt;quote&gt;&lt;space&gt;encoding=&lt;quote&gt;US_ASCII&lt;quote&gt;&lt;space&gt;standalone=&lt;quote&gt;no&lt;quote&gt;&lt;space&gt;?&lt;gt&gt;&lt;lt&gt;geometry&lt;gt&gt;&lt;lt&gt;null&lt;solidus&gt;&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;geometry&lt;gt&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GEOMTYPE" PARM_VALUE="Geometry Object"/>
+#!     <XFORM_PARM PARM_NAME="NUM" PARM_VALUE="1"/>
+#!     <XFORM_PARM PARM_NAME="OAN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Creator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="JSONExtractor"
+#!   VERSION="5"
+#!   POSITION="-1537.2750369562691 -534.32434287190517"
+#!   BOUNDING_RECT="-1537.2750369562691 -534.32434287190517 454 71"
+#!   ORDER="500000000000265.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="EVALUATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXTRACT_QUERY_TABLE" PARM_VALUE="installationcomplete json&lt;openbracket&gt;&lt;quote&gt;attributes&lt;quote&gt;&lt;closebracket&gt;&lt;openbracket&gt;&lt;quote&gt;installation_complete&lt;quote&gt;&lt;closebracket&gt; followup_action_required json&lt;openbracket&gt;&lt;quote&gt;attributes&lt;quote&gt;&lt;closebracket&gt;&lt;openbracket&gt;&lt;quote&gt;followup_action_required&lt;quote&gt;&lt;closebracket&gt; reason_followup_action json&lt;openbracket&gt;&lt;quote&gt;attributes&lt;quote&gt;&lt;closebracket&gt;&lt;openbracket&gt;&lt;quote&gt;follow_up_action_comment&lt;quote&gt;&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_DOCUMENT" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_webhook.feature&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONExtractor_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="HTMLReportGenerator"
+#!   VERSION="0"
+#!   POSITION="297.12170466897533 -448.73271786474629"
+#!   BOUNDING_RECT="297.12170466897533 -448.73271786474629 492.09999999999997 71"
+#!   ORDER="500000000000064"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CONTENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONTENT_LIST" PARM_VALUE="HTML"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PAGE_CONFIG" PARM_VALUE="HTML{{HTML;&lt;lt&gt;p&lt;gt&gt;Hello&lt;comma&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;&lt;lt&gt;br&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;This&lt;space&gt;is&lt;space&gt;to&lt;space&gt;notify&lt;space&gt;you&lt;space&gt;that&lt;space&gt;further&lt;space&gt;action&lt;space&gt;is&lt;space&gt;required&lt;space&gt;from&lt;space&gt;Survey123&lt;space&gt;.&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;&lt;lt&gt;br&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;Reason&lt;space&gt;for&lt;space&gt;follow-up&lt;space&gt;action:&lt;space&gt;&lt;at&gt;Value&lt;openparen&gt;reason_followup_action&lt;closeparen&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;&lt;lt&gt;br&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;&lt;lf&gt;&lt;lt&gt;p&lt;gt&gt;This&lt;space&gt;is&lt;space&gt;a&lt;space&gt;system-generated&lt;space&gt;email&lt;comma&gt;&lt;space&gt;please&lt;space&gt;don&lt;amp&gt;apos&lt;semicolon&gt;t&lt;space&gt;reply.&lt;lt&gt;&lt;solidus&gt;p&lt;gt&gt;;FME_CONTROLLER_QUERY_FILE;transformers&lt;solidus&gt;dependencies&lt;solidus&gt;html5&lt;solidus&gt;Custom&lt;space&gt;HTML.fme;FME_CONTROLLER_CHOICE;Custom&lt;space&gt;HTML}}"/>
+#!     <XFORM_PARM PARM_NAME="PAGE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TITLE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="HTMLReportGenerator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="FeatureJoiner"
+#!   VERSION="1000"
+#!   POSITION="1422.7165285501469 -550.25653037559869"
+#!   BOUNDING_RECT="1422.7165285501469 -550.25653037559869 430 71"
+#!   ORDER="500000000000311.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="JOINED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="UNJOINED_LEFT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="UNJOINED_RIGHT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Left"/>
+#!     <XFORM_PARM PARM_NAME="GEOMETRY_HANDLING" PARM_VALUE="Use Left"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="join join AUTO"/>
+#!     <XFORM_PARM PARM_NAME="JOIN_MODE" PARM_VALUE="Inner"/>
+#!     <XFORM_PARM PARM_NAME="JOIN_MODE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JOIN_ON_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureJoiner"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="-248.37736469400988 -637.77859200977468"
+#!   BOUNDING_RECT="-248.37736469400988 -637.77859200977468 454 71"
+#!   ORDER="500000000000324.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; join SET_TO 1"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="896.51690128642258 -448.73271786474629"
+#!   BOUNDING_RECT="896.51690128642258 -448.73271786474629 454 71"
+#!   ORDER="500000000000324.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="join" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; join SET_TO 1"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="Tester"
+#!   VERSION="3"
+#!   POSITION="-881.8673579489232 -577.77859200977468"
+#!   BOUNDING_RECT="-881.8673579489232 -577.77859200977468 454 71"
+#!   ORDER="500000000000330.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_MSG" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="Per Output Port"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="CASE_INSENSITIVE_TEST &lt;at&gt;Value&lt;openparen&gt;followup_action_required&lt;closeparen&gt; = Yes"/>
+#!     <XFORM_PARM PARM_NAME="TEST_CLAUSE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="CASE_INSENSITIVE_TEST"/>
+#!     <XFORM_PARM PARM_NAME="TEST_PREVIEW_GROUP" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="FeatureHolder"
+#!   VERSION="0"
+#!   POSITION="-432.99923290403694 -1086.306404560627"
+#!   BOUNDING_RECT="-432.99923290403694 -1086.306404560627 454 71"
+#!   ORDER="500000000000331.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_webhook.feature" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="installationcomplete" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="followup_action_required" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="reason_followup_action" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_PROCESSING_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureHolder"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="12"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="2049.98014234426 -663.00671701829719"
+#!   BOUNDING_RECT="2049.98014234426 -663.00671701829719 454 71"
+#!   ORDER="500000000000335.25"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="22623"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="html_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="html_content"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="13"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 CREATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="16"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="17"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 EVALUATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="20"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="12"
+#!   SOURCE_PORT_DESC="fo 0 JOINED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="14"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 1 RIGHT"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="15"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="1"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 LEFT"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="22"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="21"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="23"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 1 FAILED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+ARCGIS_COMPATIBILITY ARCGIS_AUTO
+# ============================================================================
+DEFAULT_MACRO webhook.feature {   "attributes": {     "installation_complete": "No",     "followup_action_required": "Yes",     "follow_up_action_comment": "Test"   },   "layerInfo": {     "name": "survey",     "id": 0   } } 
+
+# ============================================================================
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} NULL
+MULTI_WRITER_KEYWORD{0} AUTOMATIONS_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "AUTOMATIONS_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER AUTOMATIONS AUTOMATIONS_1
+AUTOMATIONS_1_GENERATE_FME_BUILD_NUM 20218
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)Fetch attributes from JSON and workflow to send Survey123 email notification.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+FME_NAMES_ENCODING UTF-8
+FME_BULK_MODE_THRESHOLD 2000
+LAST_SAVE_BUILD "FME 2022.1.1.0 (20220728 - Build 22623 - WIN64)"
+MAPPING_FILE_ID Survey123<space>Email<space>Notification<space><openparen>FME<space>Flow<space>Automations<closeparen>
+DEFAULT_MACRO DATASET_KEYWORD_AUTOMATIONS_1 AUTOMATIONS_1
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME Fetch attributes from JSON and workflow to send Survey123 email notification
+MACRO FME_VIEWER_APP fmedatainspector
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+Tcl2 proc Creator_2_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
+MACRO Creator_2_XML     NOT_ACTIVATED
+MACRO Creator_2_CLASSIC NOT_ACTIVATED
+MACRO Creator_2_2D3D    2D_GEOMETRY
+MACRO Creator_2_COORDS  <Unused>
+INCLUDE [ if { {Geometry Object} == {Geometry Object} } {            puts {MACRO Creator_2_XML *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Coordinate List} } {            puts {MACRO Creator_2_2D3D 2D_GEOMETRY};            puts {MACRO Creator_2_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {3D Coordinate List} } {            puts {MACRO Creator_2_2D3D 3D_GEOMETRY};            puts {MACRO Creator_2_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Min/Max Box} } {            set comment {                We need to turn the COORDS which are                    minX minY maxX maxY                into a full polygon list of coordinates            };            set splitCoords [split [string trim {<Unused>}]];            if { [llength $splitCoords] > 4} {               set trimmedCoords {};               foreach item $splitCoords { if { $item != {} } {lappend trimmedCoords $item} };               set splitCoords $trimmedCoords;            };            if { [llength $splitCoords] != 4 } {                error {Creator_2: Coordinate list is expected to be a space delimited list of four numbers as 'minx miny maxx maxy' - `<Unused>' is invalid};            };            set minX [lindex $splitCoords 0];            set minY [lindex $splitCoords 1];            set maxX [lindex $splitCoords 2];            set maxY [lindex $splitCoords 3];            puts "MACRO Creator_2_COORDS $minX $minY $minX $maxY $maxX $maxY $maxX $minY $minX $minY";            puts {MACRO Creator_2_2D3D 2D_GEOMETRY};            puts {MACRO Creator_2_CLASSIC *} } ]
+FACTORY_DEF {$(Creator_2_XML)} CreationFactory    FACTORY_NAME { Creator_2_XML_Creator }    CREATE_AT_END { no }    OUTPUT { FEATURE_TYPE _____CREATED______        @Geometry(FROM_ENCODED_STRING,<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<gt><lt>null<solidus><gt><lt><solidus>geometry<gt>) }
+FACTORY_DEF {$(Creator_2_CLASSIC)} CreationFactory    FACTORY_NAME { Creator_2_CLASSIC_Creator }    $(Creator_2_2D3D) { $(Creator_2_COORDS) }    CREATE_AT_END { no }    OUTPUT { FEATURE_TYPE _____CREATED______ }
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { Creator_2_Cloner }    INPUT FEATURE_TYPE _____CREATED______        @Tcl2(Creator_2_CoordSysRemover)        @CoordSys()    NUMBER_OF_COPIES { 1 }    OUTPUT { FEATURE_TYPE Creator_2_CREATED        fme_feature_type Creator_2         }
+FACTORY_DEF * BranchingFactory   FACTORY_NAME "Creator_2_CREATED Brancher -1 13"   INPUT FEATURE_TYPE Creator_2_CREATED   TARGET_FACTORY "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   MAXIMUM_COUNT None   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   INPUT FEATURE_TYPE *  OUTPUT FEATURE_TYPE *
+# -------------------------------------------------------------------------
+Tcl2 proc ParameterFetcher_2_doFetch {} {    foreach {name val} {"_webhook.feature {$(webhook.feature$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher_2}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher_2}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { ParameterFetcher_2 }    INPUT  FEATURE_TYPE Creator_2_CREATED    OUTPUT { FEATURE_TYPE ParameterFetcher_2_OUTPUT         @Tcl2(ParameterFetcher_2_doFetch)          }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} JSONQueryFactory    FACTORY_NAME { JSONExtractor_3 }    INPUT  FEATURE_TYPE ParameterFetcher_2_OUTPUT    MODE EXTRACT    JSON_DOCUMENT { "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_webhook.feature<closeparen>,JSONExtractor_3)" }    READ_FROM_FILE { NO }    FILEPATH_OR_URL { "<Unused>" }    QUERIES { installationcomplete json<openbracket><quote>attributes<quote><closebracket><openbracket><quote>installation_complete<quote><closebracket> followup_action_required json<openbracket><quote>attributes<quote><closebracket><openbracket><quote>followup_action_required<quote><closebracket> reason_followup_action json<openbracket><quote>attributes<quote><closebracket><openbracket><quote>follow_up_action_comment<quote><closebracket> }    OUTPUT { EVALUATED FEATURE_TYPE JSONExtractor_3_EVALUATED        }    OUTPUT { REJECTED FEATURE_TYPE JSONExtractor_3_<REJECTED>        }
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME JSONExtractor_3_<Rejected> INPUT FEATURE_TYPE JSONExtractor_3_<REJECTED>  NO_LOGGING   OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, JSONExtractor_3<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TestFactory    FACTORY_NAME { Tester }    INPUT  FEATURE_TYPE JSONExtractor_3_EVALUATED    CASE_INSENSITIVE_TEST { "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>followup_action_required<closeparen>,Tester)" = Yes ENCODED }    BOOLEAN_OPERATOR { OR }    COMPOSITE_TEST_EXPR { "<Unused>" }    FEATURE_TABLE_SHIM_SUPPORT Yes    PRESERVE_FEATURE_ORDER { PER_OUTPUT_PORT }    OUTPUT { PASSED FEATURE_TYPE Tester_PASSED         }    OUTPUT { FAILED FEATURE_TYPE Tester_FAILED         }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME { AttributeCreator }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Tester_PASSED    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ATTR_ACTION { "" "join" "SET_TO" "1" }    OUTPUT { OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT        }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeCreator OUTPUT Splitter"   INPUT FEATURE_TYPE AttributeCreator_OUTPUT   OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT_0_lQ+3mj5tm0E=   OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT_1_Et/p63Aqn4M=
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT_1_Et/p63Aqn4M=    OUTPUT { FEATURE_TYPE HTMLReportGenerator_PROCESSED       fme_html5_title ""       fme_html5_config "HTML{{HTML;@EvaluateExpression(FDIV,STRING_ENCODED,<lt>p<gt>Hello<comma><lt><solidus>p<gt><lf><lt>p<gt><lt>br<gt><lt><solidus>p<gt><lf><lt>p<gt>This<space>is<space>to<space>notify<space>you<space>that<space>further<space>action<space>is<space>required<space>from<space>Survey123<space>.<lt><solidus>p<gt><lf><lt>p<gt><lt>br<gt><lt><solidus>p<gt><lf><lt>p<gt>Reason<space>for<space>follow-up<space>action:<space><at>Value<openparen>reason_followup_action<closeparen><lt><solidus>p<gt><lf><lt>p<gt><lt>br<gt><lt><solidus>p<gt><lf><lt>p<gt>This<space>is<space>a<space>system-generated<space>email<comma><space>please<space>don<amp>apos<semicolon>t<space>reply.<lt><solidus>p<gt>,HTMLReportGenerator)"       fme_html5_group_by ""       fme_html5_xformer_name "HTMLReportGenerator" }
+FACTORY_DEF {*} PythonFactory    FACTORY_NAME { HTMLReportGenerator }    INPUT { FEATURE_TYPE HTMLReportGenerator_PROCESSED }    PYTHON_NAMESPACE FMEOBJECTS    SYMBOL_NAME reportgenerator.html5assembler.HTML5Assembler    OUTPUT { PYOUTPUT FEATURE_TYPE HTMLReportGenerator_OUTPUT            }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME { AttributeCreator_2 }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE HTMLReportGenerator_OUTPUT    MULTI_FEATURE_MODE { NO }    NULL_ATTR_MODE { NO_OP }    ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ATTR_ACTION { "" "join" "SET_TO" "1" }    OUTPUT { OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} FeatureJoinerFactory    FACTORY_NAME { FeatureJoiner }    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }    INPUT LEFT FEATURE_TYPE AttributeCreator_2_OUTPUT    INPUT RIGHT FEATURE_TYPE AttributeCreator_OUTPUT_0_lQ+3mj5tm0E=    JOIN_MODE { Inner }    JOIN_KEYS { join join AUTO }    ATTR_CONFLICT_RES { USE_LEFT }    GEOMETRY_HANDLING { USE_LEFT }    OUTPUT { JOINED FEATURE_TYPE FeatureJoiner_JOINED        }    OUTPUT { <REJECTED> FEATURE_TYPE FeatureJoiner_<REJECTED>        }
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME FeatureJoiner_<Rejected> INPUT FEATURE_TYPE FeatureJoiner_<REJECTED>  NO_LOGGING   OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, FeatureJoiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME { AttributeKeeper }    INPUT  FEATURE_TYPE FeatureJoiner_JOINED    KEEP_ATTRS { html_content }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE AttributeKeeper_OUTPUT        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} SortFactory    FACTORY_NAME { FeatureHolder }    INPUT  FEATURE_TYPE Tester_FAILED    FLUSH_WHEN_GROUPS_CHANGE { <Unused> }
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC AttributeKeeper_OUTPUT TO NULL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,__wb_out_feat_type__,__nuke_me__ GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
